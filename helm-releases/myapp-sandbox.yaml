@@ -1,0 +1,30 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: myapp-sandbox
+  namespace: default
+  labels:
+    environment: sandbox
+    application: myapp
+  annotations:
+    fluxcd.io/automated: true
+    fluxcd.io/tag.chart-image: glob:sandbox-*
+    fluxcd.io/locked: true
+spec:
+  releaseName: myapp-sandbox
+  chart:
+    git: 'git@github.com:michaelprice232/flux-config-repo.git'
+    ref: master
+    path: charts/myapp
+  values:
+    image:
+      repository: 166475535369.dkr.ecr.eu-west-2.amazonaws.com/flux-demo-app1
+      tag: sandbox-5a05c40cad7a474d6c6d8cc78f883f2b508c1408
+    ingress:
+      enabled: true
+      annotations: {kubernetes.io/ingress.class: nginx}
+      hosts:
+      - host: "a7323aa9b15dc11ea831a02189f27e50-314907079.eu-west-2.elb.amazonaws.com"
+        paths: ["/"]
+    replicaCount: 1

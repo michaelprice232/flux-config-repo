@@ -1,0 +1,12 @@
+# AWS config
+region              = "eu-west-2"
+
+# Github config
+repo_owner          = "your-github-account-name-here"
+repo_name           = "name-of-the-forked-flux-config-repo"
+github_oauth_token  = "your-personal-access-token-here"
+
+# General config
+application_name    = "flux-demo-app1"
+environment         = "sandbox"
+owner_name          = "your-name"
