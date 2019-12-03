@@ -42,7 +42,7 @@ Once the above setup is running you can run various commands:
 `fluxctl list-workloads` - list any running flux workloads.
 `kubectl -n flux get pods` - list all the flux related pods.
 
-See https://docs.fluxcd.io/en/stable/ for more details
+See official walk-through: [here](https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started-helm.md)
 
 
 ## Issues
