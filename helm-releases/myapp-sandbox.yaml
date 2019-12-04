@@ -27,4 +27,4 @@ spec:
       hosts:
       - host: "a4d240a1916a211eab2540aa543139d2-400178828.eu-west-2.elb.amazonaws.com"
         paths: ["/"]
-    replicaCount: 3
+    replicaCount: 1
