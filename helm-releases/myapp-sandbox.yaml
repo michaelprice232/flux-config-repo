@@ -7,10 +7,10 @@ metadata:
   labels:
     environment: sandbox
     application: myapp
-  annotations:
-    fluxcd.io/automated: true
-    fluxcd.io/tag.chart-image: glob:sandbox-*
-    fluxcd.io/locked: true
+#  annotations:
+#    fluxcd.io/automated: true
+#    fluxcd.io/tag.chart-image: glob:sandbox-*
+#    fluxcd.io/locked: true
 spec:
   releaseName: myapp
   chart:
