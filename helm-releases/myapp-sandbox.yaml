@@ -10,7 +10,7 @@ metadata:
   annotations:
     fluxcd.io/automated: true
     fluxcd.io/tag.chart-image: glob:sandbox-*
-#    fluxcd.io/locked: true
+    fluxcd.io/locked: true
 spec:
   releaseName: myapp
   chart:
@@ -20,7 +20,7 @@ spec:
   values:
     image:
       repository: 166475535369.dkr.ecr.eu-west-2.amazonaws.com/flux-demo-app1
-      tag: sandbox-860eff85a679eb479c59fba74785f7622b3faa91
+      tag: sandbox-755b2f4cd8d0d00bdc0b92b49066f8c735b6e881
     ingress:
       enabled: true
       annotations: {kubernetes.io/ingress.class: nginx}
